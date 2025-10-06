@@ -1,12 +1,12 @@
 # General Settings
-title = "Luique - Personal Portfolio Hugo Theme"
-baseURL = "https://bslthemes.com/" #YOUR SITE URL
-languageCode = "en-us"
+title = "Website Sekolah Cinta Ilmu"
+baseURL = "https://cintailmu.sch.id/" #YOUR SITE URL
+languageCode = "id-id"
 theme = "luique"
 resourceDir = "resources"
 paginate = 6
 summaryLength = 20
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "id"
 
 # Menu Settings
 [menu]
