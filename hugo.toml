@@ -1,31 +1,20 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://websitesci.netlify.app/'
 languageCode = 'id-id'
 title = 'Website Sekolah Cinta Ilmu'
 theme = "luique"
 
 [build]
-  noJSConfigInAssets = true
-  writeStats = true
+  noJSConfigInAssets = false  # Enable asset processing untuk SCSS
 
-# DISABLE ALL MINIFICATION
+# ENABLE CSS minification untuk production
 [minify]
-  minifyOutput = false
-  disableCSS = true
-  disableHTML = true
-  disableJS = true
+  minifyOutput = true
+  disableCSS = false   # Enable CSS minification
+  disableHTML = false  # Enable HTML minification
+  disableJS = true     # Bisa disable JS jika tidak butuh
   disableJSON = true
   disableSVG = true
   disableXML = true
-  disableTOML = true
-  disableYAML = true
-
-[caches]
-  [caches.getjson]
-    maxAge = -1
-  [caches.getcsv]
-    maxAge = -1
-  [caches.images]
-    maxAge = -1
 
 [markup.goldmark.renderer]
   unsafe = true
