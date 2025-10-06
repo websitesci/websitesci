@@ -21,8 +21,8 @@
   <link rel="stylesheet" href="{{ "plugins/animate/animate.css" | absURL }}" />
 
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
-  {{ $style := resources.Get "scss/style.scss" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ "/css/style.css" }}" />
+{{ $style := resources.Get "scss/style.scss" | css.Sass | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <link rel="stylesheet" href="{{ "plugins/template-dark/dark.css" | absURL }}" />
   
