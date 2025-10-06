@@ -17,7 +17,31 @@
 
     {{ "<!-- Footer -->" | safeHTML }}
     {{ partial "footer.html" . }}
-  </div>
+<!-- FIXED TOP MENU - Always visible -->
+	<div id="globalMenu" style="
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #333;
+		color: white;
+		padding: 15px;
+		z-index: 999999;
+		text-align: center;
+	">
+		<nav>
+			{{ range .Site.Menus.main }}
+			<a href="{{ .URL }}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">
+				{{ .Name }}
+			</a>
+			{{ end }}
+		</nav>	
+	  </div>
+
+<!-- Add padding to body to avoid overlap -->
+	<style>
+		body { padding-top: 60px !important; }
+	</style>
 
   {{ "<!-- Cursor -->" | safeHTML }}
 	<div class="cursor"></div>

@@ -3,7 +3,6 @@
 	<div class="header__builder">
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
 				<!-- logo -->
 				<div class="logo">
 					<a href="{{ .Site.BaseURL }}">
@@ -11,11 +10,14 @@
 						<img src="{{ $header.logo | absURL }}" alt="{{ $header.logo_alt }}" />
 					</a>
 				</div>
-
 			</div>
 			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+				<!-- DESKTOP MENU - Menu Bar Atas -->
+				<div class="desktop-menu" style="display: inline-block; margin-right: 20px; vertical-align: middle;">
+					
+				</div>
 
-				<!-- switcher btn -->
+				<!-- THEME SWITCHER - Pertahankan -->
 				<a href="#" class="switcher-btn">
 					<span class="sw-before">
 						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
@@ -28,61 +30,6 @@
 						</svg>
 					</span>
 				</a>
-
-				<!-- menu btn -->
-				<a href="#" class="menu-btn">
-					<span></span>
-					<span></span>
-				</a>
-
-				<!-- Menu Full Overlay -->
-				<div class="menu-full-overlay">
-					<div class="menu-full-container">
-						<div class="container">
-							<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-									<!-- menu full -->
-									<div class="menu-full">
-										<ul class="menu-full">
-											{{ $currentPage := . }}
-                      {{ range .Site.Menus.main }}
-                      {{ $menuURL := .URL | absLangURL }}
-                      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-                      {{ $active := eq $menuURL $pageURL }}
-                      <li class="menu-item{{ if .HasChildren }} menu-item-has-children has-children{{ end }}">
-                        <a class="splitting-text-anim-2" data-splitting="chars" href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a>
-                        {{ if .HasChildren }}
-                        <ul class="sub-menu">
-                          {{ range .Children }}
-                          {{ $childURL := .URL | absLangURL }}
-                          {{ $active := eq $childURL $pageURL }}
-                          <li class="menu-item{{ if $active }} menu-current-item{{ end }}"><a class="splitting-text-anim-1" data-splitting="chars" href="{{ .URL }}">{{ .Name }}</a></li>
-                          {{ end }}
-                        </ul>
-                        {{ end }}
-                      </li>
-                      {{ end }}
-										</ul>
-									</div>
-
-									<!-- social -->
-									<div class="menu-social-links">
-                    {{ range .Site.Params.social }}
-                    <a href="{{ .url }}" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="{{ .title }}">
-                      <i aria-hidden="true" class="{{ .icon }}"></i>
-                    </a>
-                    {{ end }}
-									</div>
-
-									<div class="v-line-block"><span></span></div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="menu-overlay"></div>
-				</div>
 
 			</div>
 		</div>

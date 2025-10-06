@@ -11,7 +11,7 @@ theme = "luique"
   minifyOutput = true
   disableCSS = false   # Enable CSS minification
   disableHTML = false  # Enable HTML minification
-  disableJS = true     # Bisa disable JS jika tidak butuh
+  disableJS = false   # Bisa disable JS jika tidak butuh
   disableJSON = true
   disableSVG = true
   disableXML = true
@@ -19,4 +19,32 @@ theme = "luique"
 [markup.goldmark.renderer]
   unsafe = true
 
+[menu]
+
+[[menu.main]]
+  name = "Beranda"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Sejarah"
+  url = "/services/"
+  weight = 2
+
+[[menu.main]]
+  name = "Catatan Guru"
+  url = "/blog/"
+  weight = 3
+
+[[menu.main]]
+  name = "Portfolio"
+  url = "/portfolio/"
+  weight = 4
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
+
 ignoreLogs = ['warning-goldmark-raw-html']
+
