@@ -1,12 +1,9 @@
-# Netlify configuration
-
 [build]
-  command = "hugo --gc --minify"
+  command = "hugo --gc"
   publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.128.0"
-  HUGO_EXTENDED = true
 
 [context.production.environment]
   HUGO_ENV = "production"
